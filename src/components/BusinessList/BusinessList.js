@@ -4,7 +4,7 @@ import Business from '../Business/Business';
 
 class BusinessList extends React.Component {
 	createOneBusiness(business) {
-		return <Business business={business} />;
+		return <Business business={business} key={business.id} />;
 	}
 
 	render() {
