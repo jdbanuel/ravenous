@@ -1,8 +1,8 @@
-const apiKey = process.env.API_TOKEN;
+const apiKey = process.env.REACT_APP_API_TOKEN;
 
 const Yelp = {
 	search(term, location, sortBy) {
-		return fetch(process.env.API_URL, {
+		return fetch(process.env.REACT_APP_API_URL, {
 			headers: {
 				Authorization: `Bearer ${apiKey}`,
 			},
