@@ -1,4 +1,10 @@
-const apiKey = process.env.REACT_APP_API_TOKEN;
+import { apiCredentials } from './credentials';
+
+if (process.env.REACT_APP_API_TOKEN) {
+	const apiKey = process.env.REACT_APP_API_TOKEN;
+} else {
+	const apiKey = apiCredentials.key;
+}
 
 const Yelp = {
 	search(term, location, sortBy) {
